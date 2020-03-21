@@ -8,7 +8,6 @@ import Footer from "./components/Footer";
 import Home from "./views/Home";
 import { useAuth0 } from "./auth0";
 import history from "./utils/history";
-
 // styles
 import "./App.css";
 
