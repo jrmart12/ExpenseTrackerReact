@@ -70,6 +70,10 @@
   width: 300px;
 }
 
+.ContainerTracker{
+  margin: 20px 0px;
+}
+
 .history-container {
   text-align: center;
   margin: 10px 620px;
@@ -81,6 +85,15 @@
   width: 500px;
 }
 
+.transaction-container {
+  margin: 30px 480px;
+  width: 600px;
+}
+.transaction-header-container {
+  text-align: center;
+  margin: 30px 580px;
+  width: 400px;
+}
 .h12 {
   letter-spacing: 1px;
   margin: 0;
@@ -147,14 +160,14 @@ input[type='number'] {
 
 .btn{
   cursor: pointer;
-  background-color: #3136c0;
+  background-color: #2b30c4;
   box-shadow: var(--box-shadow);
   color: #fff;
 }
 
 .btn1 {
   cursor: pointer;
-  background-color: #9c88ff;
+  background-color: #4d4ba5;
   box-shadow: var(--box-shadow);
   color: #fff;
   border: 0;
