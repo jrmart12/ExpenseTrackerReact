@@ -1,7 +1,6 @@
 import React, { Fragment } from "react";
 
-import Hero from "../components/Description";
-import ExpenseTracker from "../components/ExpenseTracker";
+import Description from "../components/Description";
 import {Balance} from "../components/Balance";
 import {IncomeExpenses} from "../components/IncomeExpenses";
 import {HistoryList} from "../components/HistoryList";
@@ -11,9 +10,8 @@ function Home() {
   return (
     <Fragment>
       <GlobalProvider>
-        <Hero />
+        <Description />
         <hr />
-        <ExpenseTracker />
         <Balance/>
         <IncomeExpenses/>
         <HistoryList/>
