@@ -2,6 +2,7 @@ import React from "react";
 
 import logo from "../assets/logo.svg";
 import image1 from "../assets/Image1.svg";
+
 const Description = () => (
   <div className="text-center hero my-5">
     <img className="mb-3 app-logo" src={logo} alt="logo" width="120" />

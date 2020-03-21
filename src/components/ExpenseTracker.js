@@ -2,13 +2,13 @@ import React, { Component } from "react";
 
 
 
-class Content extends Component {
+class ExpenseTracker extends Component {
   render() {
     return (
-      <div className="next-steps my-5">
+      <div >
       </div>
     );
   }
 }
 
-export default Content;
+export default ExpenseTracker;
