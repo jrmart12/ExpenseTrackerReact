@@ -18,7 +18,7 @@ import {
   DropdownItem
 } from "reactstrap";
 
-import { useAuth0 } from "../react-auth0-spa";
+import { useAuth0 } from "../auth0";
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,22 +32,60 @@ const NavBar = () => {
 
   return (
     <div className="nav-container">
-      <Navbar color="light" light expand="md">
+      <Navbar className="navbar-custom" color="light" light expand="md">
         <Container>
           <NavbarBrand className="logo" />
           <NavbarToggler onClick={toggle} />
           <Collapse isOpen={isOpen} navbar>
             <Nav className="mr-auto" navbar>
-              <NavItem>
-                <NavLink
-                  tag={RouterNavLink}
-                  to="/"
-                  exact
-                  activeClassName="router-link-exact-active"
-                >
-                  Home
-                </NavLink>
-              </NavItem>
+            {!isAuthenticated && (
+                <NavItem>
+                  <NavLink
+                    tag={RouterNavLink}
+                    to="/"
+                    exact
+                    activeClassName="router-link-exact-active"
+                  >
+                    Home
+                    </NavLink>
+                </NavItem>
+              )}
+              {isAuthenticated && (
+                <NavItem>
+                  <NavLink
+                    tag={RouterNavLink}
+                    to="/"
+                    exact
+                    activeClassName="router-link-exact-active"
+                  >
+                    Expense Tracker
+                    </NavLink>
+                </NavItem>
+              )}
+              {isAuthenticated && (
+                <NavItem>
+                  <NavLink
+                    tag={RouterNavLink}
+                    to="/"
+                    exact
+                    activeClassName="router-link-exact-active"
+                  >
+                    Reports
+                    </NavLink>
+                </NavItem>
+              )}
+              {isAuthenticated && (
+                <NavItem>
+                  <NavLink
+                    tag={RouterNavLink}
+                    to="/"
+                    exact
+                    activeClassName="router-link-exact-active"
+                  >
+                    Alerts
+                    </NavLink>
+                </NavItem>
+              )}
             </Nav>
             <Nav className="d-none d-md-block" navbar>
               {!isAuthenticated && (
@@ -105,26 +143,6 @@ const NavBar = () => {
                 navbar
                 style={{ minHeight: 170 }}
               >
-                <NavItem>
-                  <span className="user-info">
-                    <img
-                      src={user.picture}
-                      alt="Profile"
-                      className="nav-user-profile d-inline-block rounded-circle mr-3"
-                      width="50"
-                    />
-                    <h6 className="d-inline-block">{user.name}</h6>
-                  </span>
-                </NavItem>
-                <NavItem>
-                  <FontAwesomeIcon icon="user" className="mr-3" />
-                  <RouterNavLink
-                    to="/profile"
-                    activeClassName="router-link-exact-active"
-                  >
-                    Profile
-                  </RouterNavLink>
-                </NavItem>
                 <NavItem>
                   <FontAwesomeIcon icon="power-off" className="mr-3" />
                   <RouterNavLink

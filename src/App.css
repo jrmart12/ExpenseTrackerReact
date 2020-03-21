@@ -28,3 +28,25 @@
   left: 0;
   right: 0;
 }
+
+.image{
+    position: absolute;
+    top:  500px;
+    left: -100px;
+    opacity: 1.0;
+
+}
+
+.navbar-custom {
+  padding: 10px px;
+  width: 100%;
+  border-radius: 0px;
+  z-index: 999;
+  margin-bottom: -50px;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  font-family: "Libre Franklin", sans-serif;
+  -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+  color: #03070f !important;
+}

@@ -2,13 +2,11 @@ import React from "react";
 import { Router, Route, Switch } from "react-router-dom";
 import { Container } from "reactstrap";
 
-import PrivateRoute from "./components/PrivateRoute";
 import Loading from "./components/Loading";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 import Home from "./views/Home";
-import Profile from "./views/Profile";
-import { useAuth0 } from "./react-auth0-spa";
+import { useAuth0 } from "./auth0";
 import history from "./utils/history";
 
 // styles
@@ -32,7 +30,7 @@ const App = () => {
         <Container className="flex-grow-1 mt-5">
           <Switch>
             <Route path="/" exact component={Home} />
-            <PrivateRoute path="/profile" component={Profile} />
+
           </Switch>
         </Container>
         <Footer />
