@@ -5,7 +5,9 @@
   "main": "server.js",
   "scripts": {
     "start": "nose server",
-    "server": "nodemon server"
+    "server": "nodemon server",
+    "frontend": "npm start --prefix ../Frontend",
+    "dev": "concurrently \"npm run server \" \"npm run frontend\""
   },
   "author": "Jose Martinez",
   "license": "ISC",
