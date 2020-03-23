@@ -1,10 +1,15 @@
-import React, {useContext} from 'react'
+import React, {useContext, useEffect} from 'react'
 import {GlobalContext} from "../context/GlobalState";
 import {Transaction} from "./Transaction";
 
 export const HistoryList = () => {
-    const {transactions} = useContext(GlobalContext);
+    const {transactions, getTransactions} = useContext(GlobalContext);
     const scrollContainerStyle = { maxWidth: "650px",maxHeight: "160px" };
+
+    useEffect(() => {
+        getTransactions();
+        //eslint-disable-next-line react-hooks/exhaustive-deps
+    },[]);
     return (
         <div>
             <div className="history-container">
