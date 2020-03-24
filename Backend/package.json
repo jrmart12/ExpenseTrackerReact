@@ -4,9 +4,6 @@
   "description": "Backend",
   "main": "server.js",
   "scripts": {
-    "build": "cd Frontend && npm run build",
-    "install-frontend": "cd Frontend && npm install",
-    "heroku-postbuild":"npm run install-frontend && npm run build",
     "start": "node server",
     "server": "nodemon server",
     "frontend": "npm start --prefix ../Frontend",
