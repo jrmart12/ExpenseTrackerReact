@@ -13,7 +13,8 @@ export const NewTransaction = () => {
         addTransaction(NewTransaction);
     }
     return (
-        <div>
+
+        <div >
         <div className="transaction-header-container">
             <h3 className="h32">Add new transaction</h3>
         </div>

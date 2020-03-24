@@ -2,6 +2,7 @@ import React from "react";
 
 import logo from "../assets/logo.svg";
 import image1 from "../assets/Image1.svg";
+import image2 from "../assets/image2.svg";
 
 const Description = () => (
   <div className="text-center hero my-5">
@@ -12,6 +13,7 @@ const Description = () => (
     Generating monthly reports based on your inputs.
     </p>
     <img className="image" src={image1} alt="image1" width="600" opacity="0.6" />
+    <img className="image2" src={image2} alt="image2" width="600" opacity="0.6" />
   </div>
 );
 

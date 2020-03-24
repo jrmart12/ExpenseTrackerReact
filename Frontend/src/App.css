@@ -32,11 +32,16 @@
 .image{
     position: absolute;
     top:  500px;
-    left: -100px;
-    opacity: 1.0;
-
+    left: 20px;
 }
 
+.image2{
+  position: absolute;
+  top:  1100px;
+  left: 40px;
+  opacity: 1.0;
+
+}
 .navbar-custom {
   padding: 10px px;
   width: 100%;
@@ -53,6 +58,10 @@
 
 
 
+.chartTitle{
+  margin: 200px 400px;
+  width: 500px;
+}
 
 
 .body {

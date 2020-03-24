@@ -10,7 +10,6 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink,
   Button,
   UncontrolledDropdown,
   DropdownToggle,
@@ -39,40 +38,20 @@ const NavBar = () => {
           <Collapse isOpen={isOpen} navbar>
             <Nav className="mr-auto" navbar>
             {!isAuthenticated && (
-                <NavItem>
-                  <NavLink
-                    tag={RouterNavLink}
-                    to="/"
-                    exact
-                    activeClassName="router-link-exact-active"
-                  >
-                    Home
-                    </NavLink>
-                </NavItem>
+              <NavItem>
+                    <a className="nav-link active" href="#">Home</a>
+                  </NavItem>
+              )}
+              {isAuthenticated && (
+                  <NavItem>
+                    <a className="nav-link" href="#expenseTracker">Expense Tracker</a>
+                  </NavItem>
               )}
               {isAuthenticated && (
                 <NavItem>
-                  <NavLink
-                    tag={RouterNavLink}
-                    to="/"
-                    exact
-                    activeClassName="router-link-exact-active"
-                  >
-                    Expense Tracker
-                    </NavLink>
-                </NavItem>
-              )}
-              {isAuthenticated && (
-                <NavItem>
-                  <NavLink
-                    tag={RouterNavLink}
-                    to="/"
-                    exact
-                    activeClassName="router-link-exact-active"
-                  >
-                    Reports
-                    </NavLink>
-                </NavItem>
+                    <a className="nav-link " href="#chart">Reports</a>
+                  </NavItem>
+
               )}
             </Nav>
             <Nav className="d-none d-md-block" navbar>

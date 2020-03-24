@@ -6,6 +6,8 @@ import {IncomeExpenses} from "../components/IncomeExpenses";
 import {HistoryList} from "../components/HistoryList";
 import {NewTransaction} from "../components/NewTransaction";
 import {GlobalProvider} from "../context/GlobalState";
+import HistoryChart from '../components/HistoryChart';
+
 function Home() {
   return (
     <Fragment>
@@ -15,8 +17,11 @@ function Home() {
         <hr />
         <Balance/>
         <IncomeExpenses/>
+        <section id="expenseTracker">
         <HistoryList/>
         <NewTransaction/>
+        </section>
+        <HistoryChart/>
         </div>
       </GlobalProvider>
   </Fragment>
