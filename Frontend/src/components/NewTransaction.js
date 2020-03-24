@@ -1,12 +1,15 @@
 import React, {useState, useContext} from 'react'
 import {GlobalContext} from "../context/GlobalState";
+import { useAuth0 } from "../auth0";
 export const NewTransaction = () => {
     const {addTransaction} = useContext(GlobalContext);
     const [text, setText] = useState('');
     const [amount, setAmount] = useState(0);
+    const { user} = useAuth0();
     const onSubmit = e =>{
         e.preventDefault();
-        const NewTransaction = {id:Math.floor(Math.random()*10000),text,amount: +amount}
+        const NewTransaction = {id:user.email+Math.floor(Math.random()*10000),text,amount: +amount}
+        console.log(user.email+Math.floor(Math.random()*10000));
         addTransaction(NewTransaction);
     }
     return (
