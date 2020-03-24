@@ -1,5 +1,6 @@
 const express = require('express');
 const dotenv = require ('dotenv');
+const path = require('path');
 const colors = require('colors');
 const morgan = require('morgan');
 const connectDB = require('./config/db');
@@ -18,6 +19,10 @@ if(process.env.NODE_ENV === 'development'){
 }
 
 app.use('/api/v1/transactions',transactions);
+
+if(process.env.NODE_ENV === 'production'){
+    app.use(express.static('../Frontend/build'));
+}
 
 const PORT = process.env.PORT || 5000;
 

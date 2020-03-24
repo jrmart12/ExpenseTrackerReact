@@ -8,8 +8,7 @@ export const NewTransaction = () => {
     const { user} = useAuth0();
     const onSubmit = e =>{
         e.preventDefault();
-        const NewTransaction = {id:user.email+Math.floor(Math.random()*10000),text,amount: +amount}
-        console.log(user.email+Math.floor(Math.random()*10000));
+        const NewTransaction = {id:/*user.email+*/Math.floor(Math.random()*10000),text,amount: +amount}
         addTransaction(NewTransaction);
     }
     return (
